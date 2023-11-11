@@ -1,0 +1,20 @@
+<style>
+  .container{
+    height: 60vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+  }
+</style>
+<div class="container">
+  <h1>Counter: {{count}}</h1>
+
+  <div >
+  <button (click)="increment()">Increment</button>
+  <button (click)="decrement()">Decrement</button>
+  <button (click)="reset()">Reset</button>
+  </div>
+
+</div>
