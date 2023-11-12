@@ -1,0 +1,43 @@
+<style>
+  .myContainer{
+    height: 30vh;
+    width: 80vw;
+    border-radius: 10px;
+    padding: 30px;
+    display: flex;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+
+  }
+</style>
+
+<div style="display:flex; flex-direction: column; justify-content: center; align-items: center; height: 50vh; margin-bottom: 20px">
+  <div class="myContainer justify-content-center align-items-center mb-5">
+    <div class="">
+      <h1>{{jokes.setup}}</h1>
+      <h3>{{jokes.punchline}}</h3>
+    </div>
+  </div>
+  <div>
+
+  <button style="background: rgb(128,128,128); margin-right: 10px" (click)="onDisplayJoke()">Display My Joke</button>
+  <button style="background: green; margin-right: 10px" (click)="generateNewJoke()">Fetch Joke</button>
+  <button style="background: darkorange" (click)="saveJoke()">Save Joke</button>
+  </div>
+</div>
+
+<hr/>
+
+<div class="container "  style="display: flex; gap: 10px; flex-wrap: wrap">
+  <div class="p-lg-4" *ngFor="let j of savedJokes" style="border-radius: 7px;display: block;
+     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+">
+    <p>ID: {{j.id}}</p>
+    <p>Setup: {{j.setup}}</p>
+    <p>Punchline: {{j.punchline}}</p>
+    <p>Type: {{j.type}}</p>
+  </div>
+
+</div>
+
+
+
